@@ -1,0 +1,72 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ocean View Hotel, luxury rooms at phenominal pricing.">
+  <title>Ocean View - Submit Review</title>
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <!-- Placeholder image generator -->
+  <script src="/js/placeholders.images.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="/js/bootstrap.min.js"></script>
+  <link href="/css/style.css" rel="stylesheet">
+
+  <!-- Load navbar / footer -->
+  <script>
+    $(function () {
+      // We add / to the load because we are on a different route
+      $("#navbar-content").load("/navbar.html");
+      $("#footer-content").load("/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Import Navbar -->
+  <div id="navbar-content"></div>
+  <main class="flex-fill">
+    <br><br><br>
+    <!-- Form -->
+    <div class="container">
+      <h1>Submit a review</h1>
+      <form method="POST" action="/reviews/create">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" name="email" placeholder="john@mygreatemail.net" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" class="form-control" name="name" placeholder="John Doe" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="rating">Rating [terrible 1 - 5 amazing]</label>
+          <select class="form-control" name="rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="review">Review</label>
+          <textarea class="form-control" name="review" rows="3" required></textarea>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </main>
+  <!-- Import footer -->
+  <div id="footer-content"></footer>
+</body>
+</html>

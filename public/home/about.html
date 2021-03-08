@@ -1,0 +1,83 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ocean View Hotel, luxury rooms at phenominal pricing.">
+  <title>Ocean View - About</title>
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <!-- Placeholder image generator -->
+  <script src="/js/placeholders.images.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="/js/bootstrap.min.js"></script>
+  <link href="/css/style.css" rel="stylesheet">
+
+  <!-- Load navbar / footer -->
+  <script>
+    $(function () {
+      // We add / to the load because we are on a different route
+      $("#navbar-content").load("/navbar.html");
+      $("#footer-content").load("/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Import Navbar -->
+  <div id="navbar-content"></div>
+  <main>
+    <br><br><br>
+    <center>
+      <h1>About us</h1>
+    </center>
+
+    <div class="container marketing">
+      <hr class="feature-divider-main">
+
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="feature-heading-main">Setting the standards</h3>
+          <p class="lead">Founded in 2021, our Hotel is setting new standards for others. From modern luxury rooms, to exquisite service throughout your stay.</p>
+        </div>
+
+        <div class="col-md-4">
+          <img class="img-fluid mx-auto" src="images/downwardsArrow.png" alt="Downwards Arrow">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-8 order-md-2">
+          <h3 class="feature-heading-main">Plan your stay with confidence</h3>
+          <p class="lead">Book now, pay later. Book your stay in advance and pay later. <span class="text-muted">Subject to terms and conditions</span> </p>
+        </div>
+
+        <div class="col-md-4 order-md-1">
+          <img class="img-fluid mx-auto" src="images/downwardsArrow.png" alt="Downwards Arrow">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="feature-heading-main">Pricing</h3>
+          <p class="lead">Our Hotels provide exquisite quality at affordable pricing. Say hello to a new type of Hotel. Check out our rooms for more details.</p>
+          <a type="button" class="btn btn-outline-primary" href="/rooms">Rooms</a>
+        </div>
+
+        <div class="col-md-4 order-md-2">
+          <img class="img-fluid mx-auto" src="images/downwardsArrow.png" alt="Downwards Arrow">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <div id="footer-content"></div>
+</body>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+</html>
