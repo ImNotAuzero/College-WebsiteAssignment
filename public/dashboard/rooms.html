@@ -75,7 +75,7 @@
             `
             carouselItems += `
               <div class="carousel-item${(i < 1) ? ' active' : ''}">
-                <img src="http://localhost:3000/images/rooms/${image}" class="d-block w-100" alt="${image}">
+                <img src="http://localhost:2525/images/rooms/${image}" class="d-block w-100" alt="${image}">
               </div>
             `
           }
@@ -87,7 +87,7 @@
           <div class="col-md-4 col-sm-6">
             <div class="card" style="width: 18rem;">
               <div class="room-${res[room].number}">
-                <img class="card-img-top" src="${(res[room].images[0]) ? `http://localhost:3000/images/rooms/${(res[room].images[0])}` : 'https://via.placeholder.com/340x326/86FC22'}" alt="Card image cap">
+                <img class="card-img-top" src="${(res[room].images[0]) ? `http://localhost:2525/images/rooms/${(res[room].images[0])}` : 'https://via.placeholder.com/340x326/86FC22'}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${res[room].type} (${res[room].number})</h5>
                   <p class="card-text">${String(res[room].description).substring(0,62)}...</p>
