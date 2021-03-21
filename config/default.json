@@ -1,0 +1,17 @@
+{
+    "app": {
+        "port": 2525
+    },
+    "database": {
+        "url": "mongodb://localhost:27017/website"
+    },
+    "images": {
+        "url": "http://localhost:2525/"
+    },
+    "auth": {
+        "jwt": {
+            "key": "w3bs1te",
+            "enabled": true
+        }
+    }
+}
