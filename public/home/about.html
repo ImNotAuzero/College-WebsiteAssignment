@@ -6,8 +6,13 @@
   <meta name="description" content="Ocean View Hotel, luxury rooms at phenominal pricing.">
   <title>Ocean View - About</title>
 
+  <!-- Service Worker -->
+  <script>
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('serviceworker.js', { scope: '/' }).then(async (res) => { console.log(`Service Worker appended: ${res}`)});
+  </script>
+
   <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.js" type="text/javascript"></script>
 
   <!-- Placeholder image generator -->
   <script src="/js/placeholders.images.min.js"></script>
