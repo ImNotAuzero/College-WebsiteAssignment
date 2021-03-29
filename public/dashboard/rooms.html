@@ -6,11 +6,13 @@
   <meta name="description" content="Ocean View Hotel, luxury rooms at phenominal pricing.">
   <title>Ocean View - Dashboard</title>
 
-  <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <!-- Service Worker -->
+  <script>
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('serviceworker.js', { scope: '/dashboard' }).then(async (res) => { console.log(`Service Worker appended: ${res}`)});
+  </script>
 
-  <!-- Placeholder image generator -->
-  <script src="/js/placeholders.images.min.js"></script>
+  <!-- jQuery -->
+  <script src="/js/jquery.js" type="text/javascript"></script>
 
   <!-- Bootstrap core CSS -->
   <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -34,9 +36,10 @@
       if(!res.length) {
         return $('#rooms-container').append(`
           <center>
-            <br><br><br><br><br><br><br><br><br>
-            <h5>Click the create room button at the top of this page to create the first room!</h5>
-            <br><br><br><br><br><br><br><br><br>
+            <div class="breakpoint">
+              <h5>Click the create room button at the top of this page to create the first room!</h5>
+            </div>
+          </center>
         `)
       }
 

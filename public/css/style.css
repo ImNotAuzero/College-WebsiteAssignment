@@ -6,9 +6,6 @@
   text-decoration: none;
 }
 
-/*
- * Custom translucent site header
- */
 .site-header {
   background-color: rgba(0, 0, 0, .85);
 }
@@ -21,6 +18,11 @@
   text-decoration: none;
 }
 
+.breakpoint {
+  max-width: 1100px;
+  align-content: center;
+  margin: auto;
+}
 
 
 /* Features */

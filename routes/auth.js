@@ -6,7 +6,6 @@ const user = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-const passport = require('passport');
 
 routes.get('/login', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../', 'public/auth/login.html'));
@@ -43,8 +42,7 @@ routes.post('/register', (req, res) => {
       }
       let User = new user({ email: req.body.email, username: req.body.username, password: hash });
       User.save();
-      res.status(200);
-      passport.authenticate('local')(req, res, function() { res.redirect('/auth/login'); });
+      res.status(200).redirect('/auth/login');
     });
   });
 });
